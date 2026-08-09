@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#nav {
+    position: fixed;     /* Fixa o elemento na tela */
+    top: 0;              /* Cola o elemento exatamente no topo */
+    left: 0;             /* Garante que comece na extremidade esquerda */
+    width: 100%;         /* Faz a barra ocupar toda a largura da tela */
+    z-index: 1000;       /* Garante que a nav fique por cima de qualquer outro conteúdo */
+    background-color: #ffffff; /* Defina uma cor de fundo para o conteúdo de baixo não vazar */
+}
+main {
+    margin-top: 120px; 
+}
+
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;       /* Distância do fundo da tela */
+    right: 20px;        /* Distância do canto direito */
+    background-color: #25D366; /* Cor verde oficial do WhatsApp */
+    width: 60px;
+    height: 60px;
+    border-radius: 50px; /* Deixa redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    z-index: 9999;      /* Garante que fica por cima de tudo */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Efeito de zoom leve ao passar o mouse por cima */
+.whatsapp-fixed:hover {
+    transform: scale(1.1);
+}
