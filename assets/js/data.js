@@ -35,14 +35,14 @@ const botaoMenu = document.getElementById('menu-toggle');
     const itensMenu = listaLinks.querySelectorAll('.nav-link');
 
     botaoMenu.addEventListener('click', () => {
-        
-        // Liga e desliga a classe que mostra os links no CSS
-        listaLinks.classList.toggle('mostrar-menu');
+        const estaAberto = botaoMenu.classList.toggle('ativo');
+        listaLinks.classList.toggle('mostrar-menu', estaAberto);
     });
 
     itensMenu.forEach(link => {
         link.addEventListener('click', () => {
             listaLinks.classList.remove('mostrar-menu');
+            botaoMenu.classList.remove('ativo');
         });
     });
 

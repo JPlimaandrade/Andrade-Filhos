@@ -42,6 +42,8 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
+    color: var(--accent);
+    
 }
 
 #nav .navbar-brand img {
@@ -52,12 +54,12 @@ body {
     color: var(--text);
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: color 0.2s ease;
+    position: relative;
 }
 
 #nav .nav-link:hover {
     color: var(--accent-soft);
-    background-color: transparent;
 }
 
 main {
@@ -127,8 +129,8 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.25rem 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
 }
 
@@ -195,6 +197,11 @@ footer p {
     font-size: 30px;
     cursor: pointer;
     color: var(--text);
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+#menu-toggle.ativo {
+    color: var(--accent-soft);
 }
 
 @media (max-width: 1024px) {
@@ -217,16 +224,26 @@ footer p {
     }
 
     #menu-links {
-        display: none !important;
+        display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
         text-align: center;
-        padding-top: 15px;
+        padding-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
         order: 3;
+        transform: translateY(-8px);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, padding-top 0.3s ease;
     }
 
     #menu-links.mostrar-menu {
-        display: flex !important;
+        max-height: 240px;
+        padding-top: 15px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .hero-content {
@@ -244,15 +261,25 @@ footer p {
     }
 
     #menu-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding-top: 10px;
+        padding-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, padding-top 0.3s ease;
     }
 
     #menu-links.mostrar-menu {
-        display: flex !important;
+        max-height: 220px;
+        padding-top: 10px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .hero {
