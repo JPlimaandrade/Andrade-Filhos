@@ -12,7 +12,7 @@
 
 <body>
 
-    <a id="btn-whatsapp" class="whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+    <a id="btn-whatsapp" class="whatsapp-fixed" href="#" aria-label="Abrir contatos no WhatsApp">
         <!-- Ícone em SVG do WhatsApp -->
         <svg xmlns="http://w3.org" viewBox="0 0 448 512" width="32" height="32" fill="#fff">
             <path
@@ -20,20 +20,42 @@
         </svg>
     </a>
 
+    <div id="whatsapp-modal" class="whatsapp-modal" aria-hidden="true" role="dialog" aria-labelledby="whatsapp-modal-title">
+        <div class="whatsapp-modal__dialog" role="document">
+            <button type="button" id="whatsapp-modal-close" class="whatsapp-modal__close" aria-label="Fechar janela de contatos">&times;</button>
+            <h2 id="whatsapp-modal-title">Escolha com quem falar</h2>
+            <p>Selecione abaixo e inicie a conversa no WhatsApp.</p>
+
+            <div class="whatsapp-modal__contacts">
+                <article class="whatsapp-contact-card">
+                    <img src="../assets/img/Perfil/Murillo-Perfil.jpg" alt="Murillo Andrade">
+                    <h3>Murillo Andrade</h3>
+                    <a href="#" data-whatsapp-number="5531991772749" target="_blank" rel="noopener noreferrer">Entrar em contato</a>
+                </article>
+
+                <article class="whatsapp-contact-card">
+                    <img src="../assets/img/Perfil/Muriel-Perfil.jpg" alt="Muriel Andrade">
+                    <h3>Muriel Andrade</h3>
+                    <a href="#" data-whatsapp-number="5531988786875" target="_blank" rel="noopener noreferrer">Entrar em contato</a>
+                </article>
+            </div>
+        </div>
+    </div>
+
 
 
     <nav class="navbar navbar-expand-sm" id="nav">
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-2">
                 <a class="navbar-brand" href="Home.html">
-                    <img src="../assets/img/logo/Exemplo-img.png" alt="Logo" width="30" height="24"
+                    <img src="../assets/img/logo/logo.png" alt="Logo" width="30" height="24"
                         class="d-inline-block align-text-top">
 
                 </a>
                 <h1 class="mb-0">Andrade & Filhos</h1>
             </div>
 
-            <button type="button" id="menu-toggle" class="menu-hidden">
+            <button type="button" id="menu-toggle" >
                 ☰
             </button>
 
@@ -61,13 +83,13 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
                     <div class="carousel-item active text-center">
-                        <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
+                        <img src="../assets/img/carrossel/Carrosel1.png" class="d-block mx-auto img-fluid" alt="...">
                     </div>
                     <div class="carousel-item text-center">
-                        <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
+                        <img src="../assets/img/carrossel/Carrosel2.jpg" class="d-block mx-auto img-fluid" alt="...">
                     </div>
                     <div class="carousel-item text-center">
-                        <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
+                        <img src="../assets/img/carrossel/Carrosel3.jpg" class="d-block mx-auto img-fluid" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
