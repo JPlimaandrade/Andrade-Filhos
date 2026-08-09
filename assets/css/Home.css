@@ -7,35 +7,97 @@
 }
 
 #nav {
-    position: fixed;     /* Fixa o elemento na tela */
-    top: 0;              /* Cola o elemento exatamente no topo */
-    left: 0;             /* Garante que comece na extremidade esquerda */
-    width: 100%;         /* Faz a barra ocupar toda a largura da tela */
-    z-index: 1000;       /* Garante que a nav fique por cima de qualquer outro conteúdo */
-    background-color: #ffffff; /* Defina uma cor de fundo para o conteúdo de baixo não vazar */
+    position: fixed;
+    /* Fixa o elemento na tela */
+    top: 0;
+    /* Cola o elemento exatamente no topo */
+    left: 0;
+    /* Garante que comece na extremidade esquerda */
+    width: 100%;
+    /* Faz a barra ocupar toda a largura da tela */
+    z-index: 1000;
+    /* Garante que a nav fique por cima de qualquer outro conteúdo */
+    background-color: #222222;
+    /* Defina uma cor de fundo para o conteúdo de baixo não vazar */
 }
+
+#nav h1 {
+    color: #ffffff;
+}
+
+#nav .nav-link {
+    color: #ffffff;
+}
+
 main {
-    margin-top: 120px; 
+    background-color: #333;
+    color: #ffffff;
+    margin-top: 64px;
 }
+
+main h1 {
+    text-align: center;
+}
+
+main #carouselExampleFade {
+    background-color: #333;
+    
+}
+
+main h2 {
+    text-align: center;
+}
+.informacoes {
+    background-color: #444;
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222222;
+    
+}
+
+footer p {
+    color: #ffffff;
+}
+
 
 
 .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;       /* Distância do fundo da tela */
-    right: 20px;        /* Distância do canto direito */
-    background-color: #25D366; /* Cor verde oficial do WhatsApp */
+    bottom: 20px;
+    /* Distância do fundo da tela */
+    right: 20px;
+    /* Distância do canto direito */
+    background-color: #25D366;
+    /* Cor verde oficial do WhatsApp */
     width: 60px;
     height: 60px;
-    border-radius: 50px; /* Deixa redondo */
+    border-radius: 50px;
+    /* Deixa redondo */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-    z-index: 9999;      /* Garante que fica por cima de tudo */
-    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    /* Sombra para dar destaque */
+    z-index: 9999;
+    /* Garante que fica por cima de tudo */
+    transition: transform 0.3s ease;
+    /* Animação ao passar o mouse */
 }
 
 /* Efeito de zoom leve ao passar o mouse por cima */
 .whatsapp-fixed:hover {
     transform: scale(1.1);
+}
+
+
+
+/* Portabilidade */
+@media (width: 1024px) {
+    main {
+    margin-top: 61px;
+}
 }

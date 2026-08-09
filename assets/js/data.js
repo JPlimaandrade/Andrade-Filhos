@@ -10,7 +10,7 @@ function configurarWhatsApp() {
         "5531991772749"
     ];
 
-    var mensagem = "Olá! Gostaria de saber mais informações sobre os serviços.";
+    var mensagem = "Olá! Vim ";
     var msgFormatada = encodeURIComponent(mensagem);
 
     // Sorteia o número da lista
@@ -26,7 +26,5 @@ function configurarWhatsApp() {
         console.log("WhatsApp linkado com wa.me para: " + sorteado);
     }
 }
-
-
 configurarWhatsApp();
 
