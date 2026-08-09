@@ -49,6 +49,9 @@ body {
 
 #nav .navbar-brand img {
     border-radius: 5px;
+    width: 80px;
+    height: 64px;
+    object-fit: contain;
 }
 
 #nav .nav-link {
@@ -345,6 +348,11 @@ footer p {
         align-items: center;
     }
 
+    #nav .navbar-brand img {
+        width: 50px;
+        height: 40px;
+    }
+
     #menu-toggle {
         display: block;
     }
@@ -381,6 +389,11 @@ footer p {
         font-weight: 700;
         letter-spacing: 0.04em;
         color: var(--accent);
+    }
+
+    #nav .navbar-brand img {
+        width: 45px;
+        height: 36px;
     }
 
     #menu-toggle {
