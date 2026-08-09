@@ -22,7 +22,7 @@
 
 
 
-    <nav class="navbar" id="nav">
+    <nav class="navbar navbar-expand-sm" id="nav">
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-2">
                 <a class="navbar-brand" href="Home.html">
@@ -33,7 +33,11 @@
                 <h1 class="mb-0">Andrade & Filhos</h1>
             </div>
 
-            <ul class="nav justify-content-middle">
+            <button type="button" id="menu-toggle" class="menu-hidden">
+                ☰
+            </button>
+
+            <ul class="nav justify-content-middle" id="menu-links">
 
                 <li class="nav-item">
                     <a class="nav-link" href="Home.html#quem_somos">Quem somos</a>
@@ -51,6 +55,7 @@
 
         </div>
     </nav>
+
     <main>
         <!-- Carrossel -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade">

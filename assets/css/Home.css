@@ -41,22 +41,24 @@ main h1 {
 
 main #carouselExampleFade {
     background-color: #333;
-    
+
 }
 
 main h2 {
     text-align: center;
 }
+
 .informacoes {
     background-color: #444;
     text-align: center;
     padding: 20px;
 }
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #222222;
-    
+
 }
 
 footer p {
@@ -94,10 +96,79 @@ footer p {
 }
 
 
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 /* Portabilidade */
-@media (width: 1024px) {
+@media (max-width: 1024px) {
     main {
-    margin-top: 61px;
+        margin-top: 61px;
+    }
 }
+
+@media (max-width: 768px) {
+
+    /* Ajusta a barra de navegação para exibir os itens em linha e centralizados */
+    .container-fluid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Mostra o botão hambúrguer */
+    #menu-toggle {
+        display: block !important;
+    }
+
+    #menu-links {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        text-align: center;
+        padding-top: 15px;
+        order: 3;
+        /* Força os links a irem para a última posição, abaixo da logo e do botão */
+    }
+
+    /* Classe ativada pelo JS para exibir os links */
+    #menu-links.mostrar-menu {
+        display: flex !important;
+    }
+
+    
+    main {
+        margin-top: 61px;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+
+    main {
+        margin-top: 61px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Esconde a lista de links por padrão e a transforma em uma lista vertical */
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    /* Esta classe será colocada pelo JS para fazer o menu aparecer ao clicar */
+    #menu-links.mostrar-menu {
+        display: flex !important;
+    }
 }
