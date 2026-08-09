@@ -74,20 +74,41 @@ configurarModalWhatsApp();
 
 
 const botaoMenu = document.getElementById('menu-toggle');
-    const listaLinks = document.getElementById('menu-links');
+const listaLinks = document.getElementById('menu-links');
+const navbar = document.getElementById('nav');
 
-    const itensMenu = listaLinks.querySelectorAll('.nav-link');
+const itensMenu = listaLinks.querySelectorAll('.nav-link');
 
-    botaoMenu.addEventListener('click', () => {
-        const estaAberto = botaoMenu.classList.toggle('ativo');
-        listaLinks.classList.toggle('mostrar-menu', estaAberto);
+botaoMenu.addEventListener('click', () => {
+    const estaAberto = botaoMenu.classList.toggle('ativo');
+    listaLinks.classList.toggle('mostrar-menu', estaAberto);
+});
+
+itensMenu.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const targetId = link.getAttribute('href').split('#')[1];
+        const targetElement = document.getElementById(targetId);
+        
+        // Fecha o menu
+        listaLinks.classList.remove('mostrar-menu');
+        botaoMenu.classList.remove('ativo');
+        
+        // Garante que a navbar permaneça visível
+        if (navbar) {
+            navbar.style.opacity = '1';
+            navbar.style.visibility = 'visible';
+            navbar.style.display = 'block';
+        }
+        
+        // Faz o scroll suave para o elemento
+        if (targetElement) {
+            setTimeout(() => {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
     });
-
-    itensMenu.forEach(link => {
-        link.addEventListener('click', () => {
-            listaLinks.classList.remove('mostrar-menu');
-            botaoMenu.classList.remove('ativo');
-        });
-    });
+});
 
 
