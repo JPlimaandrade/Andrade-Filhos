@@ -20,9 +20,11 @@
         </svg>
     </a>
 
-    <div id="whatsapp-modal" class="whatsapp-modal" aria-hidden="true" role="dialog" aria-labelledby="whatsapp-modal-title">
+    <div id="whatsapp-modal" class="whatsapp-modal" aria-hidden="true" role="dialog"
+        aria-labelledby="whatsapp-modal-title">
         <div class="whatsapp-modal__dialog" role="document">
-            <button type="button" id="whatsapp-modal-close" class="whatsapp-modal__close" aria-label="Fechar janela de contatos">&times;</button>
+            <button type="button" id="whatsapp-modal-close" class="whatsapp-modal__close"
+                aria-label="Fechar janela de contatos">&times;</button>
             <h2 id="whatsapp-modal-title">Escolha com quem falar</h2>
             <p>Selecione abaixo e inicie a conversa no WhatsApp.</p>
 
@@ -30,13 +32,15 @@
                 <article class="whatsapp-contact-card">
                     <img src="../assets/img/Perfil/Murillo-Perfil.jpg" alt="Murillo Andrade">
                     <h3>Murillo Andrade</h3>
-                    <a href="#" data-whatsapp-number="5531991772749" target="_blank" rel="noopener noreferrer">Entrar em contato</a>
+                    <a href="#" data-whatsapp-number="5531991772749" target="_blank" rel="noopener noreferrer">Entrar em
+                        contato</a>
                 </article>
 
                 <article class="whatsapp-contact-card">
                     <img src="../assets/img/Perfil/Muriel-Perfil.jpg" alt="Muriel Andrade">
                     <h3>Muriel Andrade</h3>
-                    <a href="#" data-whatsapp-number="5531988786875" target="_blank" rel="noopener noreferrer">Entrar em contato</a>
+                    <a href="#" data-whatsapp-number="5531988786875" target="_blank" rel="noopener noreferrer">Entrar em
+                        contato</a>
                 </article>
             </div>
         </div>
@@ -48,24 +52,23 @@
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-2">
                 <a class="navbar-brand" href="Home.html">
-                    <img src="../assets/img/logo/logo.png" alt="Logo"
-                        class="d-inline-block align-text-top">
+                    <img src="../assets/img/logo/logo.png" alt="Logo" class="d-inline-block align-text-top">
 
                 </a>
                 <h1 class="mb-0">Andrade & Filhos</h1>
             </div>
 
-            <button type="button" id="menu-toggle" >
+            <button type="button" id="menu-toggle">
                 ☰
             </button>
 
             <ul class="nav justify-content-middle" id="menu-links">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Home.html#quem_somos">Quem somos</a>
+                    <a class="nav-link" href="Home.html#quem_somos">Nossa História</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Home.html#tempo_mercado">Tempo no mercado</a>
+                    <a class="nav-link" href="Home.html#tempo_no_mercado">Tempo no mercado</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Home.html#contato">Contato</a>
@@ -109,28 +112,54 @@
             <div class="hero-content">
                 <p class="eyebrow">Escritório de Advocacia</p>
                 <h2>Segurança jurídica e atendimento humano para cada etapa.</h2>
-                <p>Na Andrade & Filhos, cada caso é tratado com atenção, estratégia e respeito aos objetivos de quem nos procura.</p>
+                <p>Na Andrade & Filhos, cada caso é tratado com atenção, estratégia e respeito aos objetivos de quem nos
+                    procura.</p>
             </div>
         </section>
 
-        <div class="informacoes">
+        <div class="informacoes" id="quem_somos">
             <div class="info-card">
-                <h2 id="quem_somos">Quem somos</h2>
+                <h2>Nossa História</h2>
                 <p>
-                    Somos um escritório comprometido com soluções jurídicas claras, modernas e estratégicas para pessoas e empresas.
-                    Atuamos com seriedade, proximidade e responsabilidade, oferecendo suporte em cada fase do processo.
+                    Hoje vamos compartilhar com vocês sobre a história do Escritório Andrade e Filhos.
+                </p>
+                <p>
+                    Ela começa em 1969, na cidade de Vargem Grande do Sul/SP, fundado pelo advogado <a
+                        href="JoseCarlos-Andrade.html">Dr. José Carlos de Andrade</a>, iniciando assim a trajetória
+                    jurídica da família.
+                </p>
+                <p>
+                    Ao longo destes <span id="tempo"></span> anos, o Escritório passou por algumas fases e reformulações, ficando até suspenso
+                    por um determinado período, devido ao seu fundador ter assumido o cargo de Procurador Federal.
+                </p>
+                <p>
+                    A partir de 2003, o advogado <a href="Murillo-Andrade.html">Dr. Murillo Andrade</a> assume o comando da banca e, posteriormente, em
+                    2012, <a href="Muriel-Andrade.html">Dr. Muriel Gustavo</a> ingressa na sociedade.
+                </p>
+                <p>
+                    Sob esta nova direção, o Escritório torna-se referência em casos de grande repercussão nacional,
+                    especializando-se em ações de alta complexidade envolvendo as áreas criminais, cíveis e familiares.
+                </p>
+                <p>
+                    Atualmente conta com escritório em Belo Horizonte e São Paulo, e com o apoio de parceiros em todo o
+                    território nacional.
                 </p>
             </div>
 
-            <div class="info-card" id="tempo_mercado">
+            <div class="info-card" id="tempo_no_mercado">
                 <h2>Tempo no mercado</h2>
-                <p id="tempo_no_mercado" class="metric"></p>
-                <p>Com uma trajetória sólida e foco em soluções práticas, o escritório construiu uma reputação baseada em confiança e excelência.</p>
+                <p id="tempo_no_mercado_texto" class="metric"></p>
+                <p>Com uma trajetória sólida e foco em soluções práticas, o escritório construiu uma reputação baseada
+                    em confiança e excelência.</p>
             </div>
 
             <div class="info-card" id="contato">
                 <h2>Contato</h2>
                 <p>Entre em contato para agendar uma conversa inicial e entender como podemos ajudar com seu caso.</p>
+                <p><strong><a href="Murillo-Andrade.html">Dr. Murillo Andrade</a>:</strong> (31) 99177-2749</p>
+                <p><strong><a href="Muriel-Andrade.html">Dr. Muriel Andrade</a>:</strong> (31) 98878-6875</p>
+                <p>Ou entre em contato com um de nossos profissionais através do botão do WhatsApp localizado no canto
+                    inferior direito da página.</p>
             </div>
 
             <div class="info-card" id="localizacao">
@@ -143,9 +172,14 @@
 
     <!-- Rodapé -->
     <footer>
-        <!-- Murillo Andrade -->
-        <!-- Muriel Andrade -->
-        <p>&copy; 2023 Andrade & Filhos. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="Murillo-Andrade.html">Dr. Murillo Andrade</a>
+            <span>•</span>
+            <a href="JoseCarlos-Andrade.html">Dr. José Carlos Andrade</a>
+            <span>•</span>
+            <a href="Muriel-Andrade.html">Dr. Muriel Andrade</a>
+        </div>
+        <p>&copy; 2026 Andrade & Filhos. Todos os direitos reservados.</p>
     </footer>
     <!-- Scripts -->
     <script src="../assets/js/data.js"></script>

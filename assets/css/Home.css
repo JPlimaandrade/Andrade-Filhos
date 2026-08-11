@@ -164,6 +164,29 @@ main {
     gap: 1.25rem;
 }
 
+.profile-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    object-fit: cover;
+}
+
+.profile-content {
+    flex: 1;
+}
+
 .info-card {
     padding: 1.2rem 0 0;
     border-top: 1px solid var(--border);
@@ -174,12 +197,30 @@ main {
     font-size: 1.2rem;
     margin-bottom: 0.75rem;
     color: var(--accent-soft);
+    transition: all 0.3s ease;
+}
+
+.info-card h2.destaque-titulo {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(200, 169, 107, 0.5);
+    transform: scale(1.05);
 }
 
 .info-card p {
     color: var(--muted);
     line-height: 1.75;
     text-align: left;
+}
+
+.info-card a {
+    color: var(--accent-soft);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-card a:hover {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .metric {
@@ -194,6 +235,25 @@ footer {
     padding: 1.5rem 1rem 2rem;
     background: #090909;
     border-top: 1px solid var(--border);
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--accent-soft);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-links span {
+    color: var(--muted);
+    margin: 0 0.5rem;
 }
 
 footer p {
@@ -375,6 +435,16 @@ footer p {
 
     .informacoes {
         grid-template-columns: 1fr;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 250px;
     }
 
     .whatsapp-modal__contacts {
