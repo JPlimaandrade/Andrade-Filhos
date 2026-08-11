@@ -12,7 +12,7 @@
 
 <body>
 
-    <a id="btn-whatsapp" class="whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+    <a id="btn-whatsapp" class="whatsapp-fixed" href="#" aria-label="Abrir contatos no WhatsApp">
         <!-- Ícone em SVG do WhatsApp -->
         <svg xmlns="http://w3.org" viewBox="0 0 448 512" width="32" height="32" fill="#fff">
             <path
@@ -20,27 +20,52 @@
         </svg>
     </a>
 
+    <div id="whatsapp-modal" class="whatsapp-modal" aria-hidden="true" role="dialog"
+        aria-labelledby="whatsapp-modal-title">
+        <div class="whatsapp-modal__dialog" role="document">
+            <button type="button" id="whatsapp-modal-close" class="whatsapp-modal__close"
+                aria-label="Fechar janela de contatos">&times;</button>
+            <h2 id="whatsapp-modal-title">Escolha com quem falar</h2>
+            <p>Selecione abaixo e inicie a conversa no WhatsApp.</p>
+
+            <div class="whatsapp-modal__contacts">
+                <article class="whatsapp-contact-card">
+                    <img src="../assets/img/Perfil/Murillo-Perfil.jpg" alt="Murillo Andrade">
+                    <h3>Murillo Andrade</h3>
+                    <a href="#" data-whatsapp-number="5531991772749" target="_blank" rel="noopener noreferrer">Entrar em
+                        contato</a>
+                </article>
+
+                <article class="whatsapp-contact-card">
+                    <img src="../assets/img/Perfil/Muriel-Perfil.jpg" alt="Muriel Andrade">
+                    <h3>Muriel Andrade</h3>
+                    <a href="#" data-whatsapp-number="5531988786875" target="_blank" rel="noopener noreferrer">Entrar em
+                        contato</a>
+                </article>
+            </div>
+        </div>
+    </div>
+
 
 
     <nav class="navbar navbar-expand-sm" id="nav">
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-2">
                 <a class="navbar-brand" href="Home.html">
-                    <img src="../assets/img/logo/Exemplo-img.png" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
+                    <img src="../assets/img/logo/logo.png" alt="Logo" class="d-inline-block align-text-top">
 
                 </a>
                 <h1 class="mb-0">Andrade & Filhos</h1>
             </div>
 
-            <button type="button" id="menu-toggle" class="menu-hidden">
+            <button type="button" id="menu-toggle">
                 ☰
             </button>
 
             <ul class="nav justify-content-middle" id="menu-links">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Home.html#quem_somos">Quem somos</a>
+                    <a class="nav-link" href="Home.html#quem_somos">Nossa História</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Home.html#tempo_no_mercado">Tempo no mercado</a>
@@ -57,80 +82,104 @@
     </nav>
 
     <main>
-        <!-- Carrossel -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-                <div class="carousel-item active text-center">
-                    <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
+        <div class="carousel-shell">
+            <div id="carouselExampleFade" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="../assets/img/carrossel/Carrosel1.png" class="d-block mx-auto img-fluid" alt="...">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="../assets/img/carrossel/Carrosel2.jpg" class="d-block mx-auto img-fluid" alt="...">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="../assets/img/carrossel/Carrosel3.jpg" class="d-block mx-auto img-fluid" alt="...">
+                    </div>
                 </div>
-                <div class="carousel-item text-center">
-                    <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
-                </div>
-                <div class="carousel-item text-center">
-                    <img src="../assets/img/carrossel/Exemplo-img.png" class="d-block mx-auto img-fluid" alt="...">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <div class="informacoes"><!-- Quem somos -->
-            <div>
-                <h2 id="quem_somos">
-                    Quem somos
-                </h2>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Escritório de Advocacia</p>
+                <h2>Segurança jurídica e atendimento humano para cada etapa.</h2>
+                <p>Na Andrade & Filhos, cada caso é tratado com atenção, estratégia e respeito aos objetivos de quem nos
+                    procura.</p>
+            </div>
+        </section>
+
+        <div class="informacoes" id="quem_somos">
+            <div class="info-card">
+                <h2>Nossa História</h2>
                 <p>
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Hoje vamos compartilhar com vocês sobre a história do Escritório Andrade e Filhos.
+                </p>
+                <p>
+                    Ela começa em 1969, na cidade de Vargem Grande do Sul/SP, fundado pelo advogado <a
+                        href="JoseCarlos-Andrade.html">Dr. José Carlos de Andrade</a>, iniciando assim a trajetória
+                    jurídica da família.
+                </p>
+                <p>
+                    Ao longo destes <span id="tempo"></span> anos, o Escritório passou por algumas fases e reformulações, ficando até suspenso
+                    por um determinado período, devido ao seu fundador ter assumido o cargo de Procurador Federal.
+                </p>
+                <p>
+                    A partir de 2003, o advogado <a href="Murillo-Andrade.html">Dr. Murillo Andrade</a> assume o comando da banca e, posteriormente, em
+                    2012, <a href="Muriel-Andrade.html">Dr. Muriel Gustavo</a> ingressa na sociedade.
+                </p>
+                <p>
+                    Sob esta nova direção, o Escritório torna-se referência em casos de grande repercussão nacional,
+                    especializando-se em ações de alta complexidade envolvendo as áreas criminais, cíveis e familiares.
+                </p>
+                <p>
+                    Atualmente conta com escritório em Belo Horizonte e São Paulo, e com o apoio de parceiros em todo o
+                    território nacional.
                 </p>
             </div>
-            <!-- Quanto tempo no mercado -->
-            <div>
-                <h2>
-                    Quanto tempo no mercado
-                </h2>
-                <p id="tempo_no_mercado"><!-- Mostra a quantos anos estão no mercado--></p>
 
-                <!-- falar de quantos casos eles tem -->
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="info-card" id="tempo_no_mercado">
+                <h2>Tempo no mercado</h2>
+                <p id="tempo_no_mercado_texto" class="metric"></p>
+                <p>Com uma trajetória sólida e foco em soluções práticas, o escritório construiu uma reputação baseada
+                    em confiança e excelência.</p>
             </div>
 
-            <!-- Contato -->
-            <div id="contato">
-                <h2>
-                    Contato
-                </h2>
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="info-card" id="contato">
+                <h2>Contato</h2>
+                <p>Entre em contato para agendar uma conversa inicial e entender como podemos ajudar com seu caso.</p>
+                <p><strong><a href="Murillo-Andrade.html">Dr. Murillo Andrade</a>:</strong> (31) 99177-2749</p>
+                <p><strong><a href="Muriel-Andrade.html">Dr. Muriel Andrade</a>:</strong> (31) 98878-6875</p>
+                <p>Ou entre em contato com um de nossos profissionais através do botão do WhatsApp localizado no canto
+                    inferior direito da página.</p>
             </div>
 
-            <!-- localização -->
-            <div id="localizacao">
-                <h2>
-                    Localização
-                </h2>
-                <p> Edifício Tech Tower — Av. Augusto de Lima, 479 - Sala 804 - Centro, Belo Horizonte - MG</p>
+            <div class="info-card" id="localizacao">
+                <h2>Localização</h2>
+                <p>Edifício Tech Tower — Av. Augusto de Lima, 479 - Sala 804 - Centro, Belo Horizonte - MG</p>
             </div>
         </div>
-
-
     </main>
 
 
     <!-- Rodapé -->
     <footer>
-        <!-- Murillo Andrade -->
-        <!-- Muriel Andrade -->
-        <p>&copy; 2023 Andrade & Filhos. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="Murillo-Andrade.html">Dr. Murillo Andrade</a>
+            <span>•</span>
+            <a href="JoseCarlos-Andrade.html">Dr. José Carlos Andrade</a>
+            <span>•</span>
+            <a href="Muriel-Andrade.html">Dr. Muriel Andrade</a>
+        </div>
+        <p>&copy; 2026 Andrade & Filhos. Todos os direitos reservados.</p>
     </footer>
     <!-- Scripts -->
     <script src="../assets/js/data.js"></script>
